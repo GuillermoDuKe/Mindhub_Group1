@@ -1,4 +1,37 @@
 
+const nav = document.getElementById("nav");
+const content = document.getElementById("card");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div class="col-lg-3 col-sm-6">
                 <div class="card p-3">
@@ -15,3 +48,4 @@
                     </div>
                 </div>
             </div>
+
