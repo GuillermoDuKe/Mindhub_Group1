@@ -13,12 +13,12 @@ function loadItems() {
 
     content.innerHTML = "";
     for (let i = pageIndex * itemsPerPage; i < (pageIndex * itemsPerPage) + itemsPerPage; i++) {
-        const name = data.eventos[i].name;
-        const img = data.eventos[i].image;
-        const desc = data.eventos[i].description;
-        const price = data.eventos[i].price;
+        const name = eventosFuturos[i].name;
+        const img = eventosFuturos[i].image;
+        const desc = eventosFuturos[i].description;
+        const price = eventosFuturos[i].price;
 
-        if (!data.eventos[i]) { break }
+        if (!eventosFuturos[i]) { break }
         const item = document.createElement("div");
         item.className = "rangoC";
         item.innerHTML += `
@@ -48,7 +48,7 @@ function loadItems() {
 
 function loadPageNav(){
 nav.innerHTML="";
-for (let i=0 ; i<(data.eventos.length/itemsPerPage); i++){
+for (let i=0 ; i<(eventosFuturos.length/itemsPerPage); i++){
     const span= document.createElement("button");
     span.innerHTML=i+1;
     span.addEventListener("click", (e)=>{
