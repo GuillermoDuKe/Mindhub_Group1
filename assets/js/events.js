@@ -2,8 +2,18 @@
 const nav = document.getElementById("nav");
 const content = document.getElementById("card");
 
+let pageIndex = 0;
+let itemsPerPage = 4;
 
 
+function loadItems(){
+ 
+    content.innerHTML = "";
+    for (let i = pageIndex * itemsPerPage; i <(pageIndex * itemsPerPage) + itemsPerPage; i++) {
+       
+        
+    }
+}
 
 
 
