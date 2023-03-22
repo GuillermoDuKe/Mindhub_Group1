@@ -33,7 +33,7 @@ function loadItems() {
                         <br>
                         <div class="d-flex justify-content-between">
                             <p class="card-text"><small class="text-muted">Price $ ${price}</small></p>
-                            <a href="pages/details.html" class="btn btn-primary float-right">View details</a>
+                            <a href="../pages/details.html" class="btn btn-primary float-right">View details</a>
                         </div>
                     </div>
                 </div>
