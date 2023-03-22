@@ -7,20 +7,20 @@ let itemsPerPage = 4;
 
 loadItems();
 
-function loadItems(){
- 
-    content.innerHTML = "";
-    for (let i = pageIndex * itemsPerPage; i <(pageIndex * itemsPerPage) + itemsPerPage; i++) {
-       const name = data.eventos[i].name;
-       const img = data.eventos[i].image;
-       const desc = data.eventos[i].description;
-       const price = data.eventos[i].price;
+function loadItems() {
 
-       if(!data.eventos[i]) {break}
+    content.innerHTML = "";
+    for (let i = pageIndex * itemsPerPage; i < (pageIndex * itemsPerPage) + itemsPerPage; i++) {
+        const name = data.eventos[i].name;
+        const img = data.eventos[i].image;
+        const desc = data.eventos[i].description;
+        const price = data.eventos[i].price;
+
+        if (!data.eventos[i]) { break }
         const item = document.createElement("div");
         item.className = "rangoC";
-        item.innerHTML+=`
-        
+        item.innerHTML += `
+
         <div class="col-lg-3 col-sm-6">
                 <div class="card p-3">
                     <img src="${img}" class="card-img-top shadow-lg bg-body-tertiary rounded"
@@ -37,15 +37,29 @@ function loadItems(){
                 </div>
             </div> `;
 
-
-            content.appendChild(item);
-       }
-       
+        content.appendChild(item);
     }
+    loadPageNav();
+}
 
 
 
-
+function loadPageNav(){
+nav.innerHTML="";
+for (let i=0 ; i<(data.eventos.length/itemsPerPage); i++){
+    const span= document.createElement("button");
+    span.innerHTML=i+1;
+    span.addEventListener("click", (e)=>{
+        pageIndex= e.target.innerHTML-1;
+        loadItems();
+    });
+    if (i===pageIndex){
+        span.style.backgroundColor="black";
+        span.style.color="white";
+    }
+    nav.append(span);
+}
+}
 
 
 
