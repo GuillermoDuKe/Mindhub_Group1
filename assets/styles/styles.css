@@ -17,3 +17,16 @@
 .c-card{
     background-color: #ffffff;
 }
+
+#nav {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#nav button{
+font-size: 1.5rem;
+border: lightgrey solid 1px;
+padding: 0.3rem;
+margin: 0.3rem;
+}
