@@ -16,7 +16,7 @@ const place = urlParams.get('place')
 let dynamicc = document.getElementById('row');  
 
 dynamicc.innerHTML = `
-<div class="card mb-3 c-card col-7" style="max-width: 900px;">
+<div class="card mb-3 c-card col-7 m-5" style="max-width: 900px;">
 <div class="row g-0">
     <div class="col-md-7 mt-3 mb-3 ">
         <img src="${imagen}" class="img-fluid rounded img-dt shadow h-100" alt="${nombre}">
@@ -41,4 +41,4 @@ dynamicc.innerHTML = `
 </div>
 </div>`;
 
-// window.history.replaceState({},'','details.html'); // AQUÍ CAMBIAMOS LA URL PARA BORARR LOS PARÁMETROS
+//window.history.replaceState({},'','details.html'); // AQUÍ CAMBIAMOS LA URL PARA BORARR LOS PARÁMETROS

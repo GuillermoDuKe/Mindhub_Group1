@@ -30,3 +30,15 @@ border: lightgrey solid 1px;
 padding: 0.3rem;
 margin: 0.3rem;
 }
+
+.tImg {
+    height: 150px;
+}
+
+.tCard {
+    height: 410px;
+}
+
+.dCard {
+    text-overflow: ellipsis;
+}
