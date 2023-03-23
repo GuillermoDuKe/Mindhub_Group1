@@ -3,7 +3,7 @@ console.log(eventosFuturos);
 
 const nav = document.getElementById("nav");
 const content = document.getElementById("card");
-
+let allEvents = eventosFuturos;
 let pageIndex = 0;
 let itemsPerPage = 4;
 
@@ -13,12 +13,18 @@ function loadItems() {
 
     content.innerHTML = "";
     for (let i = pageIndex * itemsPerPage; i < (pageIndex * itemsPerPage) + itemsPerPage; i++) {
-        const name = eventosFuturos[i].name;
-        const img = eventosFuturos[i].image;
-        const desc = eventosFuturos[i].description;
-        const price = eventosFuturos[i].price;
 
-        if (!eventosFuturos[i]) { break }
+        const name = allEvents[i].name;
+        const img = allEvents[i].image;
+        const desc = allEvents[i].description;
+        const price = allEvents[i].price;
+        const categ = allEvents[i].category;
+        const dat = allEvents[i].date;
+        const pla = allEvents[i].place;
+        const capa = allEvents[i].capacity;
+        const assis = allEvents[i].assistance;        
+
+        if (!allEvents[i]) { break }
         
         content.innerHTML += `
 
@@ -32,7 +38,7 @@ function loadItems() {
                         <br>
                         <div class="d-flex justify-content-between">
                             <p class="card-text"><small class="text-muted">Price $ ${price}</small></p>
-                            <a href="../pages/details.html" class="btn btn-primary float-right">View details</a>
+                            <a href="details.html?nombre=${name}&descripcion=${desc}&imagen=${img}&precio=${price}&category=${categ}&date=${dat}&place=${pla}&capacity=${capa}&assistance=${assis}" class="btn btn-primary float-right">View details</a>
                         </div>
                     </div>
                 </div>
@@ -43,11 +49,9 @@ function loadItems() {
     loadPageNav();
 }
 
-
-
 function loadPageNav(){
 nav.innerHTML="";
-for (let i=0 ; i<(eventosFuturos.length/itemsPerPage); i++){
+for (let i=0 ; i<(allEvents.length/itemsPerPage); i++){
     const span= document.createElement("button");
     span.innerHTML=i+1;
     span.addEventListener("click", (e)=>{
