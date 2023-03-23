@@ -11,10 +11,16 @@ function loadItems() {
 
     content.innerHTML = "";
     for (let i = pageIndex * itemsPerPage; i < (pageIndex * itemsPerPage) + itemsPerPage; i++) {
+
         const name = allEvents[i].name;
         const img = allEvents[i].image;
         const desc = allEvents[i].description;
         const price = allEvents[i].price;
+        const categ = data.eventos[i].category;
+        const dat = data.eventos[i].date;
+        const pla = data.eventos[i].place;
+        const capa = data.eventos[i].capacity;
+        const assis = data.eventos[i].assistance;        
 
         if (!allEvents[i]) { break }
         
@@ -30,7 +36,7 @@ function loadItems() {
                         <br>
                         <div class="d-flex justify-content-between">
                             <p class="card-text"><small class="text-muted">Price $ ${price}</small></p>
-                            <a href="pages/details.html" class="btn btn-primary float-right">View details</a>
+                            <a href="pages/details.html?nombre=${name}&descripcion=${desc}&imagen=${img}&precio=${price}&category=${categ}&date=${dat}&place=${pla}&capacity=${capa}&assistance=${assis}" class="btn btn-primary float-right">View details</a>
                         </div>
                     </div>
                 </div>
