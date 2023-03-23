@@ -42,3 +42,5 @@ dynamicc.innerHTML = `
 </div>`;
 
 //window.history.replaceState({},'','details.html'); // AQUÍ CAMBIAMOS LA URL PARA BORARR LOS PARÁMETROS
+
+document.title = nombre;
