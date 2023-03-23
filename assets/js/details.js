@@ -41,4 +41,4 @@ dynamicc.innerHTML = `
 </div>
 </div>`;
 
-window.history.replaceState({},'','details.html'); // AQUÍ CAMBIAMOS LA URL PARA BORARR LOS PARÁMETROS
+// window.history.replaceState({},'','details.html'); // AQUÍ CAMBIAMOS LA URL PARA BORARR LOS PARÁMETROS
