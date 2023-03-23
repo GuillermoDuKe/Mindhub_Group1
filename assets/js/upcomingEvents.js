@@ -19,9 +19,8 @@ function loadItems() {
         const price = eventosFuturos[i].price;
 
         if (!eventosFuturos[i]) { break }
-        const item = document.createElement("div");
-        item.className = "rangoC";
-        item.innerHTML += `
+        
+        content.innerHTML += `
 
         <div class="col-lg-3 col-sm-6">
                 <div class="card p-3">
@@ -39,7 +38,7 @@ function loadItems() {
                 </div>
             </div> `;
 
-        content.appendChild(item);
+        
     }
     loadPageNav();
 }
