@@ -11,6 +11,8 @@ function loadItems() {
     content.innerHTML = "";
     for (let i = pageIndex * itemsPerPage; i < (pageIndex * itemsPerPage) + itemsPerPage; i++) {
 
+        if (!allEvents[i]) { break }
+
         const name = allEvents[i].name;
         const img = allEvents[i].image;
         const desc = allEvents[i].description;
@@ -21,8 +23,6 @@ function loadItems() {
         const capa = allEvents[i].capacity;
         const assis = allEvents[i].assistance;        
 
-        if (!allEvents[i]) { break }
-        
         content.innerHTML += `
         <div class="col-lg-3 col-sm-6 ">
                 <div class="card p-3 tCard">
