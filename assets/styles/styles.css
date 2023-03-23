@@ -42,3 +42,14 @@ margin: 0.3rem;
 .dCard {
     text-overflow: ellipsis;
 }
+.tBody {
+    height: 260px;
+}
+
+.tFoot{
+    height: 35px;
+}
+
+.tDec {
+    height: 160px;
+}
