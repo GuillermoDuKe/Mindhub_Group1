@@ -42,7 +42,7 @@ const data = {
         category: "Museum",
         place: "Paris",
         capacity: 8200,
-        assistance: 8200,
+        estimate: 8200,
         price: 3500,
       },
       {
@@ -64,7 +64,7 @@ const data = {
         category: "Costume Party",
         place: "Room C",
         capacity: 12000,
-        assistance: 9000,
+        estimate: 9000,
         price: 12,
       },
       {
@@ -75,7 +75,7 @@ const data = {
         category: "Music Concert",
         place: "Room A",
         capacity: 138000,
-        assistance: 138000,
+        estimate: 138000,
         price: 150,
       },
       {
@@ -119,7 +119,7 @@ const data = {
         category: "Book Exchange",
         place: "Room D1",
         capacity: 150000,
-        assistance: 123286,
+        estimate: 123286,
         price: 1,
       },
       {
@@ -152,7 +152,7 @@ const data = {
         category: "Cinema",
         place: "Room D1",
         capacity: 9000,
-        assistance: 9000,
+        estimate: 9000,
         price: 250,
       },
     ],
